@@ -45,7 +45,7 @@ def menu():
 # bisa input nilai desimal dipisahkan dengan titik
 def inputNilai(jenisNilai):                         #Tugas atau UTS atau UAS
     while True:
-        nilai = input(f"Masukkan Nilai {jenisNilai} {inputNama} : ")
+        nilai = input(f"Masukkan Nilai {jenisNilai}: ")
         if nilai.isnumeric():                                       #jika nilai bukan numeric maka akan input ulang untuk menghindari typo
             nilai = int(nilai)
             if nilai >= 1 and nilai <= 100:
@@ -126,12 +126,12 @@ def updateData():
             break
         print(f"Nama tidak boleh mengandung unsur selain alphabet!")
     while True:
-        inputKelas = input(f"Masukkan Kelas ({kelasMin}-{kelasMax}) : ")
+        inputKelas = input("Masukkan Kelas : ")
         if inputKelas.isnumeric():
             inputKelas = int(inputKelas)
             if kelasMin <= inputKelas <= kelasMax:
                 break
-        print(f"Kelas {jenjang} hanya boleh diisi angka {kelasMin} sampai {kelasMax}!")
+        print(f"Kelas hanya boleh diisi angka!")
     nilaiTugas = inputNilai("Tugas")
     nilaiUTS = inputNilai("UTS")
     nilaiUAS = inputNilai("UAS")
